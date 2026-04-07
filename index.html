@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi Chatbot</title>
+</head>
+<body>
+
+<h1>Mi Chatbot 🤖</h1>
+<img src="https://imgur.com/a/W1uU6Bd" width="100">
+
+<input type="text" id="userInput">
+<button onclick="responder()">Enviar</button>
+
+<p id="respuesta"></p>
+
+<script>
+function responder() {
+  let input = document.getElementById("userInput").value.toLowerCase();
+  let respuesta = "";
+
+  if (input.includes("hola")) respuesta = "Hola 👋";
+  else if (input.includes("nombre")) respuesta = "Soy un bot";
+  else respuesta = "No entiendo 😅";
+
+  document.getElementById("respuesta").innerText = respuesta;
+}
+</script>
+
+</body>
+</html>
